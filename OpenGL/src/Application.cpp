@@ -10,6 +10,7 @@
 #include "Renderer.h"
 #include "Shader.h"
 #include "tests/TestClearColor.h"
+#include "tests/TestTexture2D.h"
 #include "Texture.h"
 #include "VertexArray.h"
 #include "VertexBuffer.h"
@@ -73,6 +74,7 @@ int main(void)
         currentTest = testMenu;
 
         testMenu->RegisterTest<test::TestClearColor>("Clear Color");
+        testMenu->RegisterTest<test::TestTexture2D>("2D Texture");
 
         while (!glfwWindowShouldClose(window))
         {
